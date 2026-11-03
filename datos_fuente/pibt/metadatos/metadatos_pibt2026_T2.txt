@@ -1,0 +1,30 @@
+
+Identifier: DCAT-MEX-INEGI-SCNM.PIBT-AB2018-020
+
+Title: Sistema de Cuentas Nacionales de México. Producto Interno Bruto Trimestral. Serie detallada. Cifras preliminares
+
+Description: INEGI. Sistema de Cuentas Nacionales de México. Producto Interno Bruto Trimestral. Serie detallada. SNIEG. Información de Interés Nacional. 
+
+Ofrece en el corto plazo, una visión oportuna, completa y coherente de la evolución de las actividades económicas del país, proporcionando información oportuna y actualizada, para apoyar la toma de decisiones. 
+
+Modified: 2026-08-20
+
+Publisher: Instituto Nacional de Estadística y Geografía, INEGI
+
+Mbox: atencion.usuarios@inegi.org.mx
+
+License: https://www.inegi.org.mx/inegi/terminos.html
+
+DataDictionary:   
+
+Keyword: "actividad industrial", "sector industrial", "sectores económicos", "industria manufacturera evolución", "indicador", "corto plazo", "secundario", "construcción", "electricidad", "minería"
+
+ContactPoint: Mtro. J. Armando Aguiar Rodríguez, 800 111 4634
+
+Temporal: 1993-01-2026-06
+
+Spatial: Estados Unidos Mexicanos
+
+AccrualPeriodicity: Trimestralmente
+
+Distribution: https://www.inegi.org.mx/programas/pib/2018/

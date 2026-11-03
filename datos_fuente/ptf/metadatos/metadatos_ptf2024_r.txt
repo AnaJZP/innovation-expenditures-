@@ -1,0 +1,30 @@
+
+Identifier: DCAT-MEX-INEGI-SCNM.PTF-AB2018-007
+
+Title: Sistema de Cuentas Nacionales de México. Productividad Total de los Factores - modelo KLEMS. Año base 2018. Cifras revisadas
+
+Description: INEGI. Sistema de Cuentas Nacionales de México. Productividad Total de los Factores - Modelo KLEMS. SNIEG. Información de Interés Nacional.
+
+La productividad total de los factores, a partir de 1990, bajo el modelo KLEMS, cuyo significado conocemos como: LA (Latinoamérica), Capital (K), Trabajo (L), Energía (E), Materiales (M) y Servicios (S). El objetivo del Proyecto es integrar una plataforma de datos estadísticos y analíticos comparables a nivel internacional, que permita identificar los factores de la producción -capital, trabajo e insumos intermedios-, su contribución al crecimiento económico para 67 grupos de subsectores económicos.
+
+Modified: 2026-08-24
+
+Publisher: Instituto Nacional de Estadística y Geografía, INEGI
+
+Mbox: atencion.usuarios@inegi.org.mx
+
+License: https://www.inegi.org.mx/inegi/terminos.html
+
+DataDictionary:
+
+Keyword: "valor", "producción", "servicios", "capital", "servicios laborales", "energía", "materiales", "servicios", "productividad total", "factores", "residuo", "solow", "contribución", "crecimiento económico"
+
+ContactPoint: Mtro. J. Armando Aguiar Rodríguez, 800 111 4634
+
+Temporal: 1991-01-2024-12
+
+Spatial: Estados Unidos Mexicanos
+
+AccrualPeriodicity: Anualmente
+
+Distribution: https://www.inegi.org.mx/programas/ptf/2018/

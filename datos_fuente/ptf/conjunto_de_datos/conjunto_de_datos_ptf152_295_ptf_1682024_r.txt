@@ -1,0 +1,7 @@
+"Leyendas."
+"C1","El código y la denominación ´430 Comercio al por mayor´ se han creado para concentrar todos los subsectores contemplados en el SCIAN 2013 dedicados a las actividades de distribución de bienes al por mayor."
+"C2","El código y la denominación ´460 Comercio al por menor´ se han creado para concentrar todos los subsectores contemplados en el SCIAN 2013 dedicados a las actividades de distribución de bienes al por menor."
+"R","Revisada"
+"No Aplica.","NA"
+"No Significativo.","NS"
+"No Disponible.","ND"

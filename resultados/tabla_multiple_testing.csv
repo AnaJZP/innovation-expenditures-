@@ -1,0 +1,4 @@
+spending,tests,p<0.05,expected_false_at_5pct,BH_q10_survivors,Bonferroni_5pct
+rd,65,6,3.2,2,2
+sw,69,4,3.5,2,1
+ip,64,5,3.2,3,3

@@ -1,0 +1,30 @@
+
+Identifier:   DCAT-MEX-INEGI-SCNM.MIP-AB2018-031
+
+Title:   Sistema de Cuentas Nacionales de México. Matriz de Insumo Producto
+
+Description:   INEGI. Sistema de Cuentas Nacionales de México. Matriz de Insumo Producto. SNIEG. Información de Interés Nacional. 
+
+El producto representa un instrumento de planeación y toma de decisiones para políticas económicas. A través de su uso, se puede responder a múltiples interrogantes sobre las necesidades e impactos en los niveles de producción, insumos. 
+
+Modified:   2023-08-25
+
+Publisher:   Instituto Nacional de Estadística y Geografía, INEGI
+
+Mbox:   atencion.usuarios@inegi.org.mx
+
+License:   https://www.inegi.org.mx/inegi/terminos.html
+
+DataDictionary:   
+
+Keyword:   "matriz simétrica", "domestica", "insumo", "producto", "clase"
+
+ContactPoint:   Mtro. J. Armando Aguiar Rodríguez, 800 111 4634
+
+Temporal:   2018
+
+Spatial:   Estados Unidos Mexicanos
+
+AccrualPeriodicity:   Quinquenalmente
+
+Distribution:   https://www.inegi.org.mx/programas/mip/2018/

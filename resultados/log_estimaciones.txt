@@ -1,0 +1,495 @@
+Zeros (activity-years, 2016-2018): {'rd': 3, 'sw': 0, 'ip': 13} of 192
+
+Descriptive statistics
+                                      count       mean       50%        std     min         max
+GVA (millions 2018 MXN)              192.0   323885.9  159763.5   482597.7  2712.5   2268261.4
+Intangible spending, total           192.0     6390.0     215.9    48548.0     0.1    556748.4
+R&D for innovation                   192.0      389.3      30.7     1685.4     0.0     14583.9
+Software and databases               192.0     5862.8     142.1    48124.2     0.1    553679.4
+Patents, trademarks, tech. packages  192.0      137.9      15.6      502.3     0.0      5685.4
+Capital stock (millions 2018 MXN)    192.0   838804.7  221907.2  2480854.9  1429.5  20128353.0
+Hours worked (thousands)             192.0  1068273.8  509112.3  1665362.3  7273.9  10684885.8
+Persons employed                     192.0   498139.8  219098.0   748019.3  3242.0   4389316.0
+
+Correlations
+            ln_va  ln_gastot  ln_rd  ln_sw  ln_ip  ln_k  ln_h
+ln_va       1.00       0.73   0.61   0.72   0.55  0.73  0.79
+ln_gastot   0.73       1.00   0.82   0.97   0.81  0.50  0.57
+ln_rd       0.61       0.82   1.00   0.72   0.76  0.42  0.53
+ln_sw       0.72       0.97   0.72   1.00   0.73  0.47  0.58
+ln_ip       0.55       0.81   0.76   0.73   1.00  0.30  0.47
+ln_k        0.73       0.50   0.42   0.47   0.30  1.00  0.66
+ln_h        0.79       0.57   0.53   0.58   0.47  0.66  1.00
+
+== A1_pooled_noctrl pooled OLS, no controls  N=192 R2=0.533
+         coef      se       p  p_boot
+const  8.8780  0.3191  0.0000     NaN
+ln_rd  0.1412  0.0920  0.1299     NaN
+ln_sw  0.4349  0.0814  0.0000     NaN
+ln_ip -0.0377  0.0723  0.6041     NaN
+
+== A2_pooled_ctrl pooled OLS + capital + hours + year dummies  N=192 R2=0.784
+         coef      se       p  p_boot
+const  2.4648  1.1609  0.0377     NaN
+ln_rd  0.0253  0.0687  0.7138     NaN
+ln_sw  0.2167  0.0726  0.0041     NaN
+ln_ip  0.0206  0.0515  0.6903     NaN
+ln_k   0.2471  0.0836  0.0044     NaN
+ln_h   0.3805  0.0981  0.0003     NaN
+y2017 -0.0157  0.0300  0.6021     NaN
+y2018 -0.0331  0.0385  0.3936     NaN
+
+== A2b_pooled_ctrl_sectorFE pooled OLS + K + H + year + 2-digit sector dummies  N=192 R2=0.870
+         coef      se       p  p_boot
+const  1.4782  0.9608  0.1289     NaN
+ln_rd  0.1475  0.0778  0.0625  0.1211
+ln_sw  0.1306  0.0752  0.0873  0.1591
+ln_ip -0.0677  0.0564  0.2341  0.3247
+ln_k   0.2768  0.0760  0.0005     NaN
+ln_h   0.3993  0.1156  0.0010     NaN
+y2017 -0.0513  0.0248  0.0429     NaN
+y2018 -0.0541  0.0430  0.2131     NaN
+s_21   1.6837  0.5930  0.0061     NaN
+s_22   1.3509  0.3549  0.0003     NaN
+s_23   1.0534  0.3771  0.0069     NaN
+s_31   0.5208  0.3243  0.1133     NaN
+s_32   0.5348  0.4231  0.2109     NaN
+s_33   0.1051  0.4079  0.7975     NaN
+s_43   0.8170  0.4264  0.0599     NaN
+s_46   0.1846  0.4711  0.6965     NaN
+s_48   0.5833  0.3300  0.0820     NaN
+s_49  -0.6000  0.4687  0.2052     NaN
+s_51   0.7572  0.2589  0.0048     NaN
+s_52   1.3234  0.4223  0.0026     NaN
+s_53   1.4751  0.8120  0.0740     NaN
+s_54   0.6787  0.3400  0.0503     NaN
+s_56   1.2701  0.3248  0.0002     NaN
+s_61   1.4775  0.4005  0.0005     NaN
+s_62   0.4183  0.4739  0.3807     NaN
+s_71   0.5994  0.4030  0.1419     NaN
+s_72   0.9811  0.3871  0.0138     NaN
+s_81   0.6441  0.4884  0.1920     NaN
+
+== A2c_pooled_total_sectorFE pooled OLS, total intangibles + K + H + year + sector dummies  N=192 R2=0.873
+             coef      se       p  p_boot
+const      1.2612  0.8990  0.1656     NaN
+ln_gastot  0.2397  0.0605  0.0002   0.007
+ln_k       0.2503  0.0775  0.0020     NaN
+ln_h       0.4081  0.1069  0.0003     NaN
+y2017     -0.0053  0.0256  0.8364     NaN
+y2018     -0.0137  0.0341  0.6892     NaN
+s_21       1.4730  0.4859  0.0035     NaN
+s_22       1.4734  0.3594  0.0001     NaN
+s_23       1.1033  0.3714  0.0042     NaN
+s_31       0.4333  0.2955  0.1476     NaN
+s_32       0.6130  0.3686  0.1013     NaN
+s_33       0.2574  0.3741  0.4940     NaN
+s_43       0.8566  0.4160  0.0436     NaN
+s_46      -0.1558  0.4991  0.7560     NaN
+s_48       0.8380  0.2810  0.0041     NaN
+s_49      -0.3986  0.4186  0.3446     NaN
+s_51       0.7095  0.2607  0.0084     NaN
+s_52       1.2053  0.4396  0.0079     NaN
+s_53       1.4739  0.7338  0.0489     NaN
+s_54       0.7694  0.3227  0.0201     NaN
+s_56       1.2731  0.3324  0.0003     NaN
+s_61       1.4233  0.3729  0.0003     NaN
+s_62       0.6703  0.4448  0.1369     NaN
+s_71       0.6548  0.3865  0.0952     NaN
+s_72       0.8859  0.3587  0.0162     NaN
+s_81       0.7572  0.4687  0.1112     NaN
+
+== A2_pooled_ctrl_boot pooled OLS + capital + hours + year dummies (bootstrap)  N=192 R2=0.784
+         coef      se       p  p_boot
+const  2.4648  1.1609  0.0377     NaN
+ln_rd  0.0253  0.0687  0.7138  0.7399
+ln_sw  0.2167  0.0726  0.0041  0.0135
+ln_ip  0.0206  0.0515  0.6903  0.7039
+ln_k   0.2471  0.0836  0.0044     NaN
+ln_h   0.3805  0.0981  0.0003     NaN
+y2017 -0.0157  0.0300  0.6021     NaN
+y2018 -0.0331  0.0385  0.3936     NaN
+
+== A3_twfe two-way FE (activity + year)  N=192 R2=0.248
+         coef      se       p  p_boot
+ln_rd -0.0035  0.0107  0.7437  0.7974
+ln_sw  0.0124  0.0113  0.2773  0.4582
+ln_ip  0.0080  0.0119  0.5040  0.8569
+ln_k   0.0078  0.0467  0.8677     NaN
+ln_h   0.4852  0.1568  0.0029     NaN
+
+== A4_twfe_total two-way FE, total intangible spending  N=192 R2=0.227
+             coef      se       p  p_boot
+ln_gastot  0.0125  0.0130  0.3394  0.4812
+ln_k       0.0098  0.0442  0.8252     NaN
+ln_h       0.4706  0.1451  0.0019     NaN
+
+== A5_fd first differences  N=128 R2=0.169
+           coef      se       p  p_boot
+const    0.0066  0.0063  0.2937     NaN
+d_ln_rd  0.0039  0.0093  0.6799  0.7054
+d_ln_sw  0.0029  0.0084  0.7331  0.8054
+d_ln_ip  0.0025  0.0093  0.7873  0.9685
+d_ln_k   0.0117  0.0466  0.8024     NaN
+d_ln_h   0.4295  0.1591  0.0089     NaN
+y2018   -0.0024  0.0083  0.7765     NaN
+
+== A6_twfe_lag two-way FE, spending lagged one year  N=128 R2=0.244
+           coef      se       p  p_boot
+L_ln_rd -0.0072  0.0148  0.6277  0.6078
+L_ln_sw  0.0121  0.0077  0.1200  0.1381
+L_ln_ip  0.0097  0.0086  0.2632  0.3927
+ln_k     0.0321  0.0377  0.3978     NaN
+ln_h     0.3940  0.1720  0.0253     NaN
+
+== B1_total_pooled_noctrl total, pooled no controls  N=192 R2=0.536
+             coef      se    p  p_boot
+const      8.5886  0.3531  0.0     NaN
+ln_gastot  0.5213  0.0513  0.0     0.0
+
+== B2_total_pooled_ctrl total, pooled + K + H  N=192 R2=0.789
+             coef      se       p  p_boot
+const      2.2591  1.0691  0.0386     NaN
+ln_gastot  0.2589  0.0579  0.0000  0.0005
+ln_k       0.2298  0.0846  0.0085     NaN
+ln_h       0.3966  0.0958  0.0001     NaN
+y2017     -0.0053  0.0261  0.8403     NaN
+y2018     -0.0136  0.0342  0.6924     NaN
+
+== B5_total_fd total, first differences  N=128 R2=0.164
+               coef      se       p  p_boot
+const        0.0073  0.0067  0.2803     NaN
+d_ln_gastot  0.0040  0.0091  0.6629  0.7384
+d_ln_k       0.0107  0.0447  0.8116     NaN
+d_ln_h       0.4260  0.1500  0.0061     NaN
+y2018       -0.0020  0.0068  0.7658     NaN
+
+== B6_total_twfe_lag total, two-way FE, lagged  N=128 R2=0.163
+               coef      se       p  p_boot
+L_ln_gastot  0.0122  0.0109  0.2666  0.2996
+ln_k         0.0270  0.0346  0.4373     NaN
+ln_h         0.3741  0.1893  0.0526     NaN
+
+Robustness, production function (total intangible spending)
+                                          spec  between  between_se  between_p  between_pboot  within  within_se  within_p  within_pboot   n  clusters
+                                     Baseline   0.2397      0.0605     0.0002         0.0045  0.0125     0.0130    0.3394        0.4652 192        64
+             Alternative capital stock series   0.2424      0.0608     0.0002         0.0050  0.0125     0.0130    0.3398        0.4807 192        64
+            Persons employed instead of hours   0.2314      0.0595     0.0002         0.0035  0.0131     0.0126    0.3039        0.4232 192        64
+Spending deflated with aggregate GVA deflator   0.2239      0.0633     0.0008         0.0120  0.0054     0.0098    0.5842        0.6213 192        64
+         Excluding wholesale and retail trade   0.2472      0.0618     0.0002         0.0045  0.0159     0.0141    0.2628        0.3777 186        62
+                 Excluding basic metals (331)   0.2228      0.0687     0.0019         0.0180  0.0167     0.0132    0.2106        0.3082 189        63
+         Errors clustered by two-digit sector   0.2397      0.0713     0.0031         0.0385  0.0125     0.0138    0.3765        0.5133 192        21
+
+Pesaran CD on two-way FE residuals: CD = -0.37, p = 0.710 (N=64, T=3)
+
+Intangible intensity (R/Y), 2016-2018 means, 64 activities:
+        gastot_int   rd_int   sw_int   ip_int
+count     64.0000  64.0000  64.0000  64.0000
+mean       0.0061   0.0009   0.0046   0.0005
+std        0.0194   0.0023   0.0191   0.0011
+min        0.0001   0.0000   0.0000   0.0000
+25%        0.0008   0.0001   0.0005   0.0000
+50%        0.0018   0.0004   0.0012   0.0001
+75%        0.0040   0.0009   0.0021   0.0005
+max        0.1522   0.0174   0.1510   0.0083
+Top intensities:
+                                   subsectors  gastot_int
+klems                                                   
+460      461,462,463,464,465,466,467,468,469    0.152214
+523                                      523    0.033073
+522                                      522    0.023648
+331                                      331    0.020464
+430              431,432,433,434,435,436,437    0.013755
+524                                      524    0.010586
+312                                      312    0.009213
+491-492                              491,492    0.008667
+
+Local projections (coef = pesos of value added per peso of spending)
+                                   spec  h  year    coef  effect_1sd  ci_1sd_lo  ci_1sd_hi      se      p  p_boot  n     r2
+GVA, total intangibles, +K,H,pre-trend  1  2019  0.1797      0.0035    -0.0881     0.0951  2.4073 0.9408  0.5223 64 0.2880
+GVA, total intangibles, +K,H,pre-trend  2  2020  0.5596      0.0109    -0.2081     0.2298  5.7518 0.9228     NaN 64 0.2541
+GVA, total intangibles, +K,H,pre-trend  3  2021  0.3109      0.0060    -0.1954     0.2075  5.2925 0.9534     NaN 64 0.3349
+GVA, total intangibles, +K,H,pre-trend  4  2022  0.4826      0.0094    -0.3698     0.3886  9.9626 0.9615     NaN 64 0.1839
+GVA, total intangibles, +K,H,pre-trend  5  2023  0.5190      0.0101    -0.3205     0.3407  8.6853 0.9526     NaN 64 0.2043
+GVA, total intangibles, +K,H,pre-trend  6  2024  0.6284      0.0122    -0.3887     0.4131 10.5331 0.9526  0.6608 64 0.2836
+    TFP, total intangibles, +pre-trend  1  2019  0.2479      0.0048    -0.0974     0.1071  2.6865 0.9268  0.3717 64 0.1601
+    TFP, total intangibles, +pre-trend  2  2020  1.4745      0.0286    -0.1746     0.2319  5.3392 0.7834     NaN 64 0.0881
+    TFP, total intangibles, +pre-trend  3  2021  0.7035      0.0137    -0.0228     0.0502  0.9590 0.4661     NaN 64 0.1074
+    TFP, total intangibles, +pre-trend  4  2022  0.2892      0.0056    -0.3796     0.3909 10.1214 0.9773     NaN 64 0.0072
+    TFP, total intangibles, +pre-trend  5  2023  0.0847      0.0016    -0.1517     0.1550  4.0276 0.9833     NaN 64 0.0331
+    TFP, total intangibles, +pre-trend  6  2024  0.3240      0.0063    -0.1235     0.1361  3.4091 0.9246  0.5453 64 0.0511
+             TFP, winsorised intensity  1  2019  2.9511      0.0145    -0.0060     0.0349  2.1307 0.1712  0.1756 64 0.2143
+             TFP, winsorised intensity  2  2020  8.4484      0.0414    -0.0116     0.0944  5.5218 0.1314     NaN 64 0.1029
+             TFP, winsorised intensity  3  2021  2.8143      0.0138    -0.0242     0.0518  3.9590 0.4800     NaN 64 0.1075
+             TFP, winsorised intensity  4  2022  7.3319      0.0359    -0.0573     0.1291  9.7049 0.4530     NaN 64 0.0238
+             TFP, winsorised intensity  5  2023  2.7254      0.0134    -0.0540     0.0807  7.0129 0.6990     NaN 64 0.0357
+             TFP, winsorised intensity  6  2024  2.3105      0.0113    -0.0597     0.0823  7.3957 0.7558  0.7399 64 0.0523
+             GVA, winsorised intensity  1  2019  2.1070      0.0103    -0.0138     0.0344  2.5113 0.4050  0.4782 64 0.3289
+             GVA, winsorised intensity  2  2020  7.1682      0.0351    -0.0363     0.1065  7.4336 0.3390     NaN 64 0.2771
+             GVA, winsorised intensity  3  2021  6.0033      0.0294    -0.0113     0.0701  4.2363 0.1619     NaN 64 0.3669
+             GVA, winsorised intensity  4  2022  9.2172      0.0452    -0.0314     0.1217  7.9778 0.2528     NaN 64 0.2286
+             GVA, winsorised intensity  5  2023  8.0141      0.0393    -0.0347     0.1132  7.7063 0.3028     NaN 64 0.2342
+             GVA, winsorised intensity  6  2024  9.0205      0.0442    -0.0434     0.1318  9.1246 0.3270  0.3032 64 0.3132
+                   TFP, excl. commerce  1  2019  3.3777      0.0191    -0.0030     0.0413  1.9927 0.0955  0.1911 62 0.2620
+                   TFP, excl. commerce  2  2020  6.5757      0.0373    -0.0173     0.0918  4.9140 0.1862     NaN 62 0.1029
+                   TFP, excl. commerce  3  2021  1.3953      0.0079    -0.0256     0.0414  3.0139 0.6452     NaN 62 0.1083
+                   TFP, excl. commerce  4  2022 10.6970      0.0606    -0.0725     0.1938 11.9898 0.3761     NaN 62 0.0533
+                   TFP, excl. commerce  5  2023  3.9494      0.0224    -0.0680     0.1128  8.1423 0.6295     NaN 62 0.0405
+                   TFP, excl. commerce  6  2024  3.4933      0.0198    -0.0861     0.1257  9.5371 0.7155  0.7179 62 0.0564
+                         TFP, R&D only  1  2019  1.5926      0.0036    -0.0494     0.0567 11.8836 0.8938  0.7439 64 0.1571
+                         TFP, R&D only  2  2020  6.9920      0.0159    -0.1365     0.1684 34.1661 0.8386     NaN 64 0.0787
+                         TFP, R&D only  3  2021 -0.8670     -0.0020    -0.0214     0.0175  4.3630 0.8432     NaN 64 0.1028
+                         TFP, R&D only  4  2022  2.3597      0.0054    -0.1586     0.1694 36.7545 0.9490     NaN 64 0.0072
+                         TFP, R&D only  5  2023 -1.1783     -0.0027    -0.1294     0.1241 28.4070 0.9671     NaN 64 0.0331
+                         TFP, R&D only  6  2024 -2.7057     -0.0062    -0.1756     0.1633 37.9697 0.9434  0.8389 64 0.0511
+                    TFP, software only  1  2019  0.1698      0.0032    -0.1216     0.1281  3.3405 0.9596  0.3622 64 0.1564
+                    TFP, software only  2  2020  1.3144      0.0251    -0.2180     0.2682  6.5037 0.8405     NaN 64 0.0849
+                    TFP, software only  3  2021  0.6718      0.0128    -0.0259     0.0516  1.0364 0.5194     NaN 64 0.1068
+                    TFP, software only  4  2022  0.0627      0.0012    -0.5168     0.5192 13.8586 0.9964     NaN 64 0.0068
+                    TFP, software only  5  2023 -0.0235     -0.0004    -0.1924     0.1915  5.1343 0.9964     NaN 64 0.0330
+                    TFP, software only  6  2024  0.2541      0.0048    -0.1712     0.1809  4.7101 0.9572  0.5628 64 0.0509
+                  TFP, patents/IP only  1  2019 19.1665      0.0220    -0.0143     0.0583 16.1410 0.2398  0.4622 64 0.2876
+                  TFP, patents/IP only  2  2020 36.3357      0.0417    -0.0997     0.1831 62.8430 0.5653     NaN 64 0.1019
+                  TFP, patents/IP only  3  2021 21.2820      0.0244    -0.0216     0.0704 20.4461 0.3022     NaN 64 0.1171
+                  TFP, patents/IP only  4  2022 59.2633      0.0680    -0.1549     0.2910 99.0844 0.5521     NaN 64 0.0648
+                  TFP, patents/IP only  5  2023 36.8634      0.0423    -0.0878     0.1725 57.8336 0.5263     NaN 64 0.0587
+                  TFP, patents/IP only  6  2024 34.9060      0.0401    -0.0714     0.1515 49.5214 0.4837  0.3037 64 0.0710
+                         GVA, R&D only  1  2019  1.0391      0.0024    -0.0292     0.0339  7.0713 0.8837  0.6918 64 0.2850
+                         GVA, R&D only  2  2020  8.6373      0.0197    -0.1313     0.1706 33.8347 0.7994     NaN 64 0.2599
+                         GVA, R&D only  3  2021  6.0778      0.0138    -0.0889     0.1166 23.0302 0.7928     NaN 64 0.3407
+                         GVA, R&D only  4  2022  7.4869      0.0170    -0.1308     0.1649 33.1342 0.8220     NaN 64 0.1884
+                         GVA, R&D only  5  2023  5.7991      0.0132    -0.1350     0.1614 33.2022 0.8620     NaN 64 0.2058
+                         GVA, R&D only  6  2024  5.0230      0.0114    -0.1719     0.1948 41.0945 0.9031  0.7249 64 0.2833
+
+Local projections, errors clustered by two-digit sector
+                    spec  h    coef     se      p  p_boot  clusters
+TFP, total (winsorised)  1  2.9511 1.4373 0.0534  0.1366        21
+GVA, total (winsorised)  1  2.1070 1.1473 0.0812  0.2896        21
+               TFP, R&D  1  1.5926 2.7312 0.5663  0.5448        21
+TFP, total (winsorised)  6  2.3105 5.0985 0.6553  0.6768        21
+GVA, total (winsorised)  6  9.0205 6.9635 0.2099  0.6998        21
+               TFP, R&D  6 -2.7057 8.8816 0.7638  0.9310        21
+
+== B_joint_tfp_h1 TFP growth 2018-2019 on three intensities  N=64 R2=0.289
+                    coef       se       p  p_boot
+const            -0.0110   0.0164  0.5046     NaN
+rd_int            0.9460   9.1462  0.9180  0.8114
+sw_int            0.0354   1.6279  0.9827  0.7719
+ip_int           18.9711  17.4096  0.2804  0.4747
+pre_tfp           0.0759   0.0657  0.2529     NaN
+b_manufacturing  -0.0299   0.0221  0.1817     NaN
+b_services       -0.0001   0.0179  0.9964     NaN
+
+== B_joint_va_h1 GVA growth 2018-2019 on three intensities  N=64 R2=0.366
+                    coef       se       p  p_boot
+const            -0.0564   0.0184  0.0034     NaN
+rd_int            0.6199   5.3944  0.9089  0.7214
+sw_int            0.0474   2.6156  0.9856  0.7564
+ip_int           11.7951  18.1312  0.5181  0.4092
+dk_1              0.2038   0.1249  0.1084     NaN
+dh_1             -0.0337   0.1885  0.8590     NaN
+pre_va            0.0938   0.0965  0.3355     NaN
+b_manufacturing   0.0250   0.0186  0.1836     NaN
+b_services        0.0468   0.0256  0.0730     NaN
+
+== B_joint_tfp_h6 TFP growth 2018-2024 on three intensities  N=64 R2=0.072
+                    coef       se       p  p_boot
+const             0.0054   0.0877  0.9509     NaN
+rd_int           -3.8984  33.5350  0.9079  0.8004
+sw_int            0.0352   1.9259  0.9855  0.8319
+ip_int           35.3565  60.4713  0.5611  0.3572
+pre_tfp           0.1910   0.2291  0.4079     NaN
+b_manufacturing  -0.0079   0.0936  0.9332     NaN
+b_services       -0.0526   0.1036  0.6135     NaN
+
+== B_joint_va_h6 GVA growth 2018-2024 on three intensities  N=64 R2=0.296
+                    coef        se       p  p_boot
+const             0.0123    0.0881  0.8893     NaN
+rd_int            4.0473   39.2839  0.9183  0.7509
+sw_int            0.3109   17.8402  0.9862  0.7874
+ip_int           23.2841  121.8013  0.8491  0.7944
+dk_6             -0.0086    0.1169  0.9416     NaN
+dh_6              0.5472    0.2580  0.0385     NaN
+pre_va            0.0886    0.4582  0.8474     NaN
+b_manufacturing   0.0006    0.0915  0.9947     NaN
+b_services        0.0337    0.1052  0.7501     NaN
+
+== B_placebo_tfp placebo: TFP growth 2010-2015  N=64 R2=0.011
+                   coef       se       p  p_boot
+const            0.0476   0.0839  0.5721     NaN
+gastot_int      -1.4341   5.1358  0.7810  0.2776
+rd_int          -6.6267  18.5906  0.7228  0.2131
+b_manufacturing -0.0697   0.1092  0.5257     NaN
+b_services      -0.0448   0.1157  0.7004     NaN
+
+== B_placebo_va placebo: GVA growth 2010-2015  N=64 R2=0.023
+                   coef      se       p  p_boot
+const            0.1052  0.0462  0.0264     NaN
+gastot_int      -0.1636  2.0889  0.9378  0.1391
+rd_int           2.7361  9.5251  0.7749  0.0680
+b_manufacturing -0.0126  0.0576  0.8275     NaN
+b_services       0.0362  0.0525  0.4931     NaN
+
+Oster bounds
+ outcome  regressor  b_uncontrolled   R2_0  b_controlled   R2_1   Rmax  delta_for_zero  beta_star_delta1
+ dtfp_6     rd_int         -1.4526 0.0001       -2.7057 0.0511 0.0664         -7.1765           -3.0827
+ dtfp_6 gastot_int          0.0717 0.0000        0.3240 0.0511 0.0665         -4.2780            0.3997
+  dva_6     rd_int          8.0408 0.0057        5.0230 0.2833 0.3683          5.4367            4.0991
+
+Leave-one-out (TFP 2018-2024 on R&D intensity): min -5.220 (drop 523), max 34.815 (drop 331)
+
+Indirect (embodied) intensity:
+        rd_ind_int  gastot_ind_int
+count    64.00000        64.00000
+mean      0.00053         0.00703
+std       0.00049         0.00565
+min       0.00004         0.00049
+25%       0.00020         0.00269
+50%       0.00037         0.00504
+75%       0.00067         0.01068
+max       0.00241         0.02146
+
+== C_io_tfp_h1 TFP 2018-2019: own vs embodied supplier R&D  N=64 R2=0.158
+                   coef       se       p  p_boot
+const           -0.0080   0.0196  0.6840     NaN
+rd_int           1.3922  11.9306  0.9075  0.7694
+rd_ind_int       3.5141  19.7238  0.8592  0.8569
+pre_tfp          0.0648   0.0451  0.1558     NaN
+b_manufacturing -0.0227   0.0264  0.3926     NaN
+b_services       0.0022   0.0197  0.9124     NaN
+
+== C_io_va_h1 GVA 2018-2019: own vs embodied supplier R&D  N=64 R2=0.289
+                   coef       se       p  p_boot
+const           -0.0523   0.0202  0.0123     NaN
+rd_int           1.4957   7.1315  0.8346  0.5773
+rd_ind_int      -8.0337  17.4893  0.6478  0.6023
+dk_1             0.1897   0.1263  0.1386     NaN
+dh_1            -0.0523   0.1857  0.7791     NaN
+pre_va           0.0864   0.1111  0.4402     NaN
+b_manufacturing  0.0370   0.0240  0.1286     NaN
+b_services       0.0499   0.0272  0.0723     NaN
+
+== C_io_tfp_tot_h1 TFP 2018-2019: own vs embodied total intangibles (winsorised own)  N=64 R2=0.215
+                   coef      se       p  p_boot
+const           -0.0142  0.0199  0.4766     NaN
+gastot_int_w     2.9592  2.1437  0.1727  0.1486
+gastot_ind_int   0.2678  2.4715  0.9141  0.9150
+pre_tfp          0.0666  0.0564  0.2426     NaN
+b_manufacturing -0.0257  0.0295  0.3858     NaN
+b_services      -0.0020  0.0181  0.9145     NaN
+
+== C_io_tfp_h3 TFP 2018-2021: own vs embodied supplier R&D  N=64 R2=0.103
+                   coef       se       p  p_boot
+const           -0.0207   0.0684  0.7630     NaN
+rd_int          -0.4381   4.0402  0.9140  0.6633
+rd_ind_int      -7.5208  34.5564  0.8285  0.8194
+pre_tfp         -0.0253   0.0949  0.7906     NaN
+b_manufacturing  0.0446   0.0686  0.5178     NaN
+b_services      -0.0947   0.0775  0.2265     NaN
+
+== C_io_va_h3 GVA 2018-2021: own vs embodied supplier R&D  N=64 R2=0.343
+                    coef       se       p  p_boot
+const            -0.0408   0.0966  0.6746     NaN
+rd_int            7.2788  22.8486  0.7512  0.4212
+rd_ind_int      -20.9253  42.0992  0.6211  0.5648
+dk_3              0.0812   0.0937  0.3895     NaN
+dh_3              0.5246   0.4429  0.2412     NaN
+pre_va           -0.0183   0.2796  0.9481     NaN
+b_manufacturing   0.0547   0.0748  0.4675     NaN
+b_services       -0.0084   0.0741  0.9101     NaN
+
+== C_io_tfp_tot_h3 TFP 2018-2021: own vs embodied total intangibles (winsorised own)  N=64 R2=0.111
+                   coef      se       p  p_boot
+const           -0.0107  0.0746  0.8867     NaN
+gastot_int_w     2.7046  3.9848  0.5000  0.4622
+gastot_ind_int  -3.6342  5.1895  0.4865  0.4592
+pre_tfp         -0.0219  0.1089  0.8413     NaN
+b_manufacturing  0.0653  0.0754  0.3903     NaN
+b_services      -0.1046  0.0775  0.1827     NaN
+
+== C_io_tfp_h6 TFP 2018-2024: own vs embodied supplier R&D  N=64 R2=0.058
+                    coef       se       p  p_boot
+const            -0.0150   0.0876  0.8647     NaN
+rd_int           -6.3777  38.2721  0.8682  0.8014
+rd_ind_int       64.3906  50.9895  0.2117  0.1771
+pre_tfp           0.1722   0.1862  0.3587     NaN
+b_manufacturing  -0.0192   0.0950  0.8409     NaN
+b_services       -0.0373   0.1002  0.7113     NaN
+
+== C_io_va_h6 GVA 2018-2024: own vs embodied supplier R&D  N=64 R2=0.284
+                    coef       se       p  p_boot
+const             0.0088   0.0928  0.9249     NaN
+rd_int            3.9851  41.2673  0.9234  0.7664
+rd_ind_int       18.6715  51.5530  0.7186  0.6723
+dk_6             -0.0072   0.0981  0.9414     NaN
+dh_6              0.5374   0.2210  0.0183     NaN
+pre_va            0.0764   0.4601  0.8687     NaN
+b_manufacturing   0.0044   0.0867  0.9597     NaN
+b_services        0.0426   0.1067  0.6917     NaN
+
+== C_io_tfp_tot_h6 TFP 2018-2024: own vs embodied total intangibles (winsorised own)  N=64 R2=0.053
+                   coef      se       p  p_boot
+const           -0.0056  0.1010  0.9562     NaN
+gastot_int_w     2.3812  7.5841  0.7547  0.7319
+gastot_ind_int   2.3426  8.1051  0.7736  0.7524
+pre_tfp          0.1717  0.1973  0.3879     NaN
+b_manufacturing -0.0172  0.1192  0.8855     NaN
+b_services      -0.0497  0.1022  0.6288     NaN
+
+== D_het_tfp_h6 TFP 2018-2024: R&D return by technology group  N=64 R2=0.108
+                     coef        se       p  p_boot
+const              0.0143    0.0888  0.8729     NaN
+rd_int            -4.1304   56.0598  0.9415  0.8254
+rd_x_ht          -69.3804   61.7687  0.2662  0.2391
+rd_x_kis         125.4723  176.5671  0.4803  0.3572
+hightech           0.1324    0.0997  0.1896     NaN
+kis                0.0222    0.2896  0.9393     NaN
+pre_tfp            0.1730    0.2720  0.5273     NaN
+b_manufacturing    0.0083    0.0962  0.9313     NaN
+b_services        -0.0821    0.1069  0.4458     NaN
+
+== D_het_va_h6 GVA 2018-2024: R&D return by technology group  N=64 R2=0.500
+                    coef        se       p  p_boot
+const             0.0531    0.0870  0.5445     NaN
+rd_int            0.4711   30.3967  0.9877  0.9425
+rd_x_ht         -26.7452   62.9994  0.6729  0.4542
+rd_x_kis         99.6296  116.9206  0.3980  0.3637
+hightech          0.0482    0.1470  0.7443     NaN
+kis               0.2916    0.1485  0.0548     NaN
+dk_6             -0.1099    0.1123  0.3321     NaN
+dh_6              0.8117    0.2542  0.0024     NaN
+pre_va           -0.1084    0.2943  0.7142     NaN
+b_manufacturing   0.0139    0.0855  0.8716     NaN
+b_services       -0.0415    0.1052  0.6952     NaN
+
+Multiple testing, subsector-interaction design (70 non-commerce subsectors, classical SEs)
+ spending  tests  p<0.05  expected_false_at_5pct  BH_q10_survivors  Bonferroni_5pct
+      rd     65       6                     3.2                 2                2
+      sw     69       4                     3.5                 2                1
+      ip     64       5                     3.2                 3                3
+
+Embodiment (rd): median multiplier 2.16, median indirect share 0.56, share of activities where indirect > direct: 0.55
+  klems subsectors  direct   total  multiplier  indirect_share
+    331        331 0.01430 0.01538     1.07488         0.06966
+    332        332 0.00028 0.00223     8.03229         0.87550
+    523        523 0.00173 0.00201     1.16545         0.14196
+    488        488 0.00159 0.00201     1.26729         0.21092
+    521        521 0.00175 0.00183     1.04163         0.03997
+    493        493 0.00116 0.00174     1.50342         0.33485
+    335        335 0.00025 0.00159     6.46316         0.84528
+    336        336 0.00085 0.00150     1.77888         0.43785
+    333        333 0.00053 0.00141     2.67248         0.62582
+491-492    491,492 0.00077 0.00115     1.48330         0.32583
+
+Embodiment (gastot): median multiplier 2.57, median indirect share 0.61, share of activities where indirect > direct: 0.67
+  klems                          subsectors  direct   total  multiplier  indirect_share
+    523                                 523 0.01927 0.02162     1.12157         0.10839
+    522                                 522 0.01940 0.02045     1.05409         0.05131
+    460 461,462,463,464,465,466,467,468,469 0.01989 0.02044     1.02770         0.02696
+    331                                 331 0.01621 0.01902     1.17372         0.14801
+491-492                             491,492 0.00711 0.00909     1.27961         0.21851
+    524                                 524 0.00472 0.00688     1.45837         0.31430
+    521                                 521 0.00510 0.00565     1.10733         0.09693
+    332                                 332 0.00146 0.00502     3.44013         0.70931
+533-551                             533,551 0.00223 0.00471     2.11144         0.52639
+    488                                 488 0.00287 0.00406     1.41292         0.29224

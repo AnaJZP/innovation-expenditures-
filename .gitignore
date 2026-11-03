@@ -1,0 +1,52 @@
+# Only the replication package is tracked. Manuscripts, submission files,
+# co-author notes and local environments stay out of the repository.
+/*
+!/.gitignore
+!/README.md
+!/requirements.txt
+!/analisis/
+!/datos_fuente/
+!/resultados/
+
+/analisis/*
+!/analisis/02_construir_panel.py
+!/analisis/03_estimaciones.py
+!/analisis/04_figuras.py
+
+# INEGI source files: only those the scripts read, plus their metadata
+/datos_fuente/*
+!/datos_fuente/innonce19_01.xlsx
+!/datos_fuente/innonce19_07.xlsx
+!/datos_fuente/pibt/
+!/datos_fuente/ptf/
+!/datos_fuente/mip/
+
+/datos_fuente/pibt/conjunto_de_datos/*
+!/datos_fuente/pibt/conjunto_de_datos/conjunto_de_datos_pibtc_pibt_cor2026_t2.*
+!/datos_fuente/pibt/conjunto_de_datos/conjunto_de_datos_pibtc_pibt_cte2026_t2.*
+
+/datos_fuente/ptf/conjunto_de_datos/*
+!/datos_fuente/ptf/conjunto_de_datos/conjunto_de_datos_ptf152_295_ptf_1522024_r.*
+!/datos_fuente/ptf/conjunto_de_datos/conjunto_de_datos_ptf152_295_ptf_1532024_r.*
+!/datos_fuente/ptf/conjunto_de_datos/conjunto_de_datos_ptf152_295_ptf_1672024_r.*
+!/datos_fuente/ptf/conjunto_de_datos/conjunto_de_datos_ptf152_295_ptf_1682024_r.*
+!/datos_fuente/ptf/conjunto_de_datos/conjunto_de_datos_ptf152_295_ptf_1692024_r.*
+!/datos_fuente/ptf/conjunto_de_datos/conjunto_de_datos_ptf152_295_ptf_1702024_r.*
+!/datos_fuente/ptf/conjunto_de_datos/conjunto_de_datos_ptf152_295_ptf_1722024_r.*
+!/datos_fuente/ptf/conjunto_de_datos/conjunto_de_datos_ptf152_295_ptf_1742024_r.*
+!/datos_fuente/ptf/conjunto_de_datos/conjunto_de_datos_ptf152_295_ptf_2462024_r.*
+!/datos_fuente/ptf/conjunto_de_datos/conjunto_de_datos_ptf152_295_ptf_2832024_r.*
+!/datos_fuente/ptf/conjunto_de_datos/conjunto_de_datos_ptf152_295_ptf_2862024_r.*
+!/datos_fuente/ptf/conjunto_de_datos/conjunto_de_datos_ptf152_295_ptf_2912024_r.*
+!/datos_fuente/ptf/conjunto_de_datos/conjunto_de_datos_ptf152_295_ptf_2922024_r.*
+
+/datos_fuente/mip/conjunto de datos/*
+!/datos_fuente/mip/conjunto de datos/conjunto_de_datos_mip_d_pb_ixi_22018.*
+
+.DS_Store
+~$*
+__pycache__/
+
+# Figures of the first revision, not produced by the scripts above
+/resultados/figura1_proyecciones_locales.png
+/resultados/figura2_contenido_id_insumo_producto.png
